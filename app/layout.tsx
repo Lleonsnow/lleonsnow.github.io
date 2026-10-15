@@ -31,6 +31,13 @@ export const metadata: Metadata = {
     template: `%s · ${site.fullName}`,
   },
   description: site.tagline,
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
 };
 
 export default function RootLayout({
