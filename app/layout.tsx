@@ -6,6 +6,7 @@ import { ContactTheme } from "@/components/ContactTheme";
 import { CustomScrollbar } from "@/components/CustomScrollbar";
 import { LocaleHtml } from "@/components/LocaleHtml";
 import { PageTransition } from "@/components/PageTransition";
+import { ScrollTop } from "@/components/ScrollTop";
 import { getSite } from "@/content/site";
 import "./globals.css";
 
@@ -46,6 +47,7 @@ export default function RootLayout({
         <Header />
         <PageTransition>{children}</PageTransition>
         <Footer />
+        <ScrollTop />
       </body>
     </html>
   );
