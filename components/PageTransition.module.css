@@ -1,0 +1,62 @@
+.main {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.stage {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.stage :is(h1, h2, h3, p, li),
+.stage :global(.ctaTarget) {
+  animation: textIn 1.2s ease both;
+}
+
+.stage :is(h1) {
+  animation-delay: 0.08s;
+}
+
+.stage :is(h2) {
+  animation-delay: 0.16s;
+}
+
+.stage :is(h3) {
+  animation-delay: 0.22s;
+}
+
+.stage :is(p) {
+  animation-delay: 0.28s;
+}
+
+.stage :global(.ctaTarget) {
+  animation-delay: 0.34s;
+}
+
+.stage :is(li) {
+  animation-delay: 0.34s;
+}
+
+@keyframes textIn {
+  from {
+    opacity: 0;
+    transform: translateY(0.35rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage :is(h1, h2, h3, p, li),
+  .stage :global(.ctaTarget) {
+    animation: none;
+  }
+}

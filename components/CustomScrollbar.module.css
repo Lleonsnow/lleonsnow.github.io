@@ -1,0 +1,30 @@
+.root {
+  display: none;
+}
+
+:global(html) {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+
+:global(*::-webkit-scrollbar) {
+  width: 6px;
+  height: 6px;
+}
+
+:global(*::-webkit-scrollbar-track) {
+  background: transparent;
+}
+
+:global(*::-webkit-scrollbar-thumb) {
+  background: color-mix(in srgb, var(--accent) 72%, var(--highlight));
+  border-radius: 999px;
+}
+
+:global(*::-webkit-scrollbar-thumb:hover) {
+  background: var(--accent);
+}
+
+:global(*::-webkit-scrollbar-corner) {
+  background: transparent;
+}
