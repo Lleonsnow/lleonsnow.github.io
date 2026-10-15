@@ -1,0 +1,63 @@
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.item {
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--highlight) 80%, transparent);
+}
+
+.item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.name {
+  margin: 0 0 0.2rem;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.name a:hover {
+  color: var(--accent);
+}
+
+.blurb {
+  margin: 0 0 0.35rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.stack {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.desc {
+  margin: 0;
+  color: var(--ink);
+}
+
+.compact {
+  gap: 1rem;
+}
+
+.compact .item {
+  padding-bottom: 1rem;
+}
+
+.compact .name {
+  font-size: 1.1rem;
+}
