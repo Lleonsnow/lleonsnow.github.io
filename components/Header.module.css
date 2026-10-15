@@ -3,21 +3,20 @@
   top: 0;
   z-index: 20;
   flex-shrink: 0;
-  min-height: 3.5rem;
   backdrop-filter: blur(10px);
   background: color-mix(in srgb, var(--bg) 88%, transparent);
   border-bottom: 1px solid color-mix(in srgb, var(--highlight) 70%, transparent);
 }
 
 .inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  column-gap: 1.25rem;
   width: min(100% - 2rem, var(--max));
   min-height: 3.5rem;
   margin-inline: auto;
-  padding-block: 0.9rem;
+  padding-block: 0.85rem;
 }
 
 .brand {
@@ -27,31 +26,27 @@
   color: var(--ink);
   text-decoration: none;
   letter-spacing: -0.03em;
+  justify-self: start;
 }
 
 .brand:hover {
   color: var(--accent);
 }
 
-.right {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.75rem 1.25rem;
-}
-
 .nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem 1rem;
+  flex-wrap: nowrap;
+  align-items: center;
   justify-content: flex-end;
+  gap: 0.35rem 1.1rem;
+  min-width: 0;
 }
 
 .link {
   color: var(--muted);
   text-decoration: none;
   font-size: 0.95rem;
+  white-space: nowrap;
 }
 
 .link:hover,
@@ -67,10 +62,12 @@
 
 .langs {
   display: flex;
+  align-items: center;
   gap: 0.4rem;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.04em;
+  justify-self: end;
 }
 
 .lang {
@@ -86,4 +83,42 @@
 
 .langActive {
   color: var(--accent);
+}
+
+@media (max-width: 719px) {
+  .inner {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "brand langs"
+      "nav nav";
+    row-gap: 0.7rem;
+    column-gap: 0.75rem;
+    padding-block: 0.75rem 0.85rem;
+  }
+
+  .brand {
+    grid-area: brand;
+  }
+
+  .langs {
+    grid-area: langs;
+  }
+
+  .nav {
+    grid-area: nav;
+    justify-content: space-between;
+    width: 100%;
+    gap: 0.35rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .link {
+    font-size: 0.9rem;
+  }
 }

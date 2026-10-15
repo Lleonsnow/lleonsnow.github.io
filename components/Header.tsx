@@ -22,45 +22,45 @@ export function Header() {
         <Link href={homeHref} className={styles.brand}>
           {site.name}
         </Link>
-        <div className={styles.right}>
-          <nav className={styles.nav} aria-label={locale === "ru" ? "Меню" : "Main"}>
-            {site.nav.map((item) => {
-              const active =
-                item.path === "/"
-                  ? pathname === homeHref
-                  : pathname === item.href || pathname.startsWith(`${item.href}/`);
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={
-                    active ? `${styles.link} ${styles.linkActive}` : styles.link
-                  }
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
-          </nav>
-          <div className={styles.langs} aria-label="Language">
-            {(["ru", "en"] as Locale[]).map((code) => {
-              const href = switchLocalePath(pathname, code);
-              const active = locale === code;
-              return (
-                <Link
-                  key={code}
-                  href={href}
-                  className={
-                    active ? `${styles.lang} ${styles.langActive}` : styles.lang
-                  }
-                  hrefLang={code}
-                  lang={code}
-                >
-                  {code.toUpperCase()}
-                </Link>
-              );
-            })}
-          </div>
+
+        <nav className={styles.nav} aria-label={locale === "ru" ? "Меню" : "Main"}>
+          {site.nav.map((item) => {
+            const active =
+              item.path === "/"
+                ? pathname === homeHref
+                : pathname === item.href || pathname.startsWith(`${item.href}/`);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={
+                  active ? `${styles.link} ${styles.linkActive}` : styles.link
+                }
+              >
+                {item.label}
+              </Link>
+            );
+          })}
+        </nav>
+
+        <div className={styles.langs} aria-label="Language">
+          {(["ru", "en"] as Locale[]).map((code) => {
+            const href = switchLocalePath(pathname, code);
+            const active = locale === code;
+            return (
+              <Link
+                key={code}
+                href={href}
+                className={
+                  active ? `${styles.lang} ${styles.langActive}` : styles.lang
+                }
+                hrefLang={code}
+                lang={code}
+              >
+                {code.toUpperCase()}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </header>

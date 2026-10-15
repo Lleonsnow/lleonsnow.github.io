@@ -34,18 +34,26 @@ body {
   font-size: 1.05rem;
   line-height: 1.6;
   background-color: var(--bg);
+  transition: background-color 0.45s ease, color 0.45s ease;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-color: var(--bg);
   background-image:
-    radial-gradient(ellipse 80% 50% at 12% -8%, rgba(26, 107, 90, 0.14), transparent 55%),
-    radial-gradient(ellipse 55% 40% at 92% 8%, rgba(184, 208, 196, 0.75), transparent 52%),
+    radial-gradient(ellipse 80% 50% at 12% -8%, rgba(26, 107, 90, 0.16), transparent 55%),
+    radial-gradient(ellipse 55% 40% at 92% 8%, rgba(184, 208, 196, 0.8), transparent 52%),
     repeating-linear-gradient(
       -18deg,
       transparent,
       transparent 31px,
-      rgba(11, 31, 27, 0.035) 31px,
-      rgba(11, 31, 27, 0.035) 32px
+      rgba(11, 31, 27, 0.04) 31px,
+      rgba(11, 31, 27, 0.04) 32px
     );
-  background-attachment: fixed;
-  transition: background-color 0.45s ease, color 0.45s ease;
 }
 
 body.theme-contact {
@@ -55,18 +63,50 @@ body.theme-contact {
   --accent: #4cd278;
   --highlight: #1a3d36;
   --surface: rgba(5, 35, 32, 0.7);
+  overflow-y: hidden;
+}
+
+body.theme-contact::before {
   background-color: var(--bg);
   background-image:
-    radial-gradient(ellipse 70% 45% at 85% 20%, rgba(76, 210, 120, 0.08), transparent 55%),
-    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(26, 107, 90, 0.14), transparent 50%),
+    radial-gradient(ellipse 70% 45% at 85% 20%, rgba(76, 210, 120, 0.12), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(26, 107, 90, 0.18), transparent 50%),
     repeating-linear-gradient(
       -18deg,
       transparent,
       transparent 31px,
-      rgba(232, 242, 239, 0.03) 31px,
-      rgba(232, 242, 239, 0.03) 32px
+      rgba(232, 242, 239, 0.035) 31px,
+      rgba(232, 242, 239, 0.035) 32px
     );
-  overflow-y: hidden;
+}
+
+@media (max-width: 719px) {
+  body::before {
+    background-image:
+      radial-gradient(ellipse 90% 55% at 8% 0%, rgba(26, 107, 90, 0.2), transparent 58%),
+      radial-gradient(ellipse 70% 45% at 100% 5%, rgba(184, 208, 196, 0.95), transparent 55%),
+      radial-gradient(ellipse 60% 40% at 50% 100%, rgba(26, 107, 90, 0.1), transparent 60%),
+      repeating-linear-gradient(
+        -18deg,
+        transparent,
+        transparent 28px,
+        rgba(11, 31, 27, 0.05) 28px,
+        rgba(11, 31, 27, 0.05) 29px
+      );
+  }
+
+  body.theme-contact::before {
+    background-image:
+      radial-gradient(ellipse 80% 50% at 90% 10%, rgba(76, 210, 120, 0.16), transparent 55%),
+      radial-gradient(ellipse 60% 45% at 5% 85%, rgba(26, 107, 90, 0.22), transparent 55%),
+      repeating-linear-gradient(
+        -18deg,
+        transparent,
+        transparent 28px,
+        rgba(232, 242, 239, 0.04) 28px,
+        rgba(232, 242, 239, 0.04) 29px
+      );
+  }
 }
 
 body:not(.theme-contact) {
