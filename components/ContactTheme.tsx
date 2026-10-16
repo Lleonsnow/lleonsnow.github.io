@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { usePathname } from "next/navigation";
 
 export function ContactTheme() {
@@ -11,9 +11,8 @@ export function ContactTheme() {
     pathname.startsWith("/contact/") ||
     pathname.startsWith("/en/contact/");
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.body.classList.toggle("theme-contact", dark);
-    return () => document.body.classList.remove("theme-contact");
   }, [dark]);
 
   return null;

@@ -44,16 +44,22 @@ body {
   font-size: 1.05rem;
   line-height: 1.6;
   background-color: var(--bg);
-  transition: background-color 0.45s ease, color 0.45s ease;
+  transition: background-color 0.6s ease, color 0.6s ease;
 }
 
-body::before {
+body::before,
+body::after {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: -1;
   pointer-events: none;
-  background-color: var(--bg);
+  transition: opacity 0.6s ease;
+}
+
+body::before {
+  z-index: -2;
+  opacity: 1;
+  background-color: #e3eee8;
   background-image:
     radial-gradient(ellipse 80% 50% at 12% -8%, rgba(26, 107, 90, 0.16), transparent 55%),
     radial-gradient(ellipse 55% 40% at 92% 8%, rgba(184, 208, 196, 0.8), transparent 52%),
@@ -63,6 +69,22 @@ body::before {
       transparent 31px,
       rgba(11, 31, 27, 0.04) 31px,
       rgba(11, 31, 27, 0.04) 32px
+    );
+}
+
+body::after {
+  z-index: -1;
+  opacity: 0;
+  background-color: #052320;
+  background-image:
+    radial-gradient(ellipse 70% 45% at 85% 20%, rgba(76, 210, 120, 0.12), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(26, 107, 90, 0.18), transparent 50%),
+    repeating-linear-gradient(
+      -18deg,
+      transparent,
+      transparent 31px,
+      rgba(232, 242, 239, 0.035) 31px,
+      rgba(232, 242, 239, 0.035) 32px
     );
 }
 
@@ -77,17 +99,11 @@ body.theme-contact {
 }
 
 body.theme-contact::before {
-  background-color: var(--bg);
-  background-image:
-    radial-gradient(ellipse 70% 45% at 85% 20%, rgba(76, 210, 120, 0.12), transparent 55%),
-    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(26, 107, 90, 0.18), transparent 50%),
-    repeating-linear-gradient(
-      -18deg,
-      transparent,
-      transparent 31px,
-      rgba(232, 242, 239, 0.035) 31px,
-      rgba(232, 242, 239, 0.035) 32px
-    );
+  opacity: 0;
+}
+
+body.theme-contact::after {
+  opacity: 1;
 }
 
 @media (max-width: 719px) {
@@ -105,7 +121,7 @@ body.theme-contact::before {
       );
   }
 
-  body.theme-contact::before {
+  body::after {
     background-image:
       radial-gradient(ellipse 80% 50% at 90% 10%, rgba(76, 210, 120, 0.16), transparent 55%),
       radial-gradient(ellipse 60% 45% at 5% 85%, rgba(26, 107, 90, 0.22), transparent 55%),
