@@ -55,15 +55,15 @@ body::before {
   pointer-events: none;
   background-color: #052320;
   background-image:
-    radial-gradient(ellipse 70% 45% at 85% 20%, rgba(76, 210, 120, 0.12), transparent 55%),
-    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(26, 107, 90, 0.18), transparent 50%),
     repeating-linear-gradient(
       -18deg,
-      transparent,
-      transparent 31px,
-      rgba(232, 242, 239, 0.045) 31px,
-      rgba(232, 242, 239, 0.045) 32px
-    );
+      transparent 0,
+      transparent 30px,
+      rgba(232, 242, 239, 0.09) 30px,
+      rgba(232, 242, 239, 0.09) 31px
+    ),
+    radial-gradient(ellipse 70% 45% at 85% 20%, rgba(76, 210, 120, 0.12), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(26, 107, 90, 0.18), transparent 50%);
 }
 
 body.theme-contact {
@@ -73,15 +73,15 @@ body.theme-contact {
 @media (max-width: 719px) {
   body::before {
     background-image:
-      radial-gradient(ellipse 80% 50% at 90% 10%, rgba(76, 210, 120, 0.14), transparent 55%),
-      radial-gradient(ellipse 60% 45% at 5% 85%, rgba(26, 107, 90, 0.2), transparent 55%),
       repeating-linear-gradient(
         -18deg,
-        transparent,
-        transparent 28px,
-        rgba(232, 242, 239, 0.055) 28px,
-        rgba(232, 242, 239, 0.055) 29px
-      );
+        transparent 0,
+        transparent 24px,
+        rgba(232, 242, 239, 0.14) 24px,
+        rgba(232, 242, 239, 0.14) 25px
+      ),
+      radial-gradient(ellipse 80% 50% at 90% 10%, rgba(76, 210, 120, 0.12), transparent 55%),
+      radial-gradient(ellipse 60% 45% at 5% 85%, rgba(26, 107, 90, 0.16), transparent 55%);
   }
 }
 
