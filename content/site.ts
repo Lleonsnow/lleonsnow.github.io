@@ -2,18 +2,19 @@ import type { Locale } from "@/lib/i18n";
 import { localizedPath } from "@/lib/i18n";
 
 const stack = [
+  "TypeScript",
+  "Next.js",
+  "NestJS",
+  "React",
+  "Prisma",
+  "PostgreSQL",
+  "Docker",
+  "Redis",
   "Python",
   "Django",
   "FastAPI",
-  "NestJS",
-  "Node.js",
   "Laravel",
-  "TypeScript",
-  "Next.js",
   "Vue",
-  "PostgreSQL",
-  "Redis",
-  "Docker",
   "Nginx",
 ] as const;
 
@@ -92,6 +93,38 @@ const copy = {
     ],
     featured: [
       {
+        name: "LAQUE Shop",
+        blurb: "Продакшен-магазин косметики",
+        stack: "Next.js · NestJS · Prisma · PostgreSQL · Docker",
+        description:
+          "Каталог, заказы, купоны, оплаты и админка на VPS — миграция с legacy WordPress/MySQL.",
+        url: "https://laque-shop.ru",
+      },
+      {
+        name: "Купонатор",
+        blurb: "Платформа купонов / промо",
+        stack: "Next.js monorepo · PostgreSQL · Docker · Nginx",
+        description:
+          "Мерчанты, промо-флоу, QR-купоны, auth и production-oriented compose.",
+        url: "https://www.kuponator.pro",
+      },
+      {
+        name: "Creon",
+        blurb: "Сайт маркетингового агентства",
+        stack: "React · Express · Strapi · PostgreSQL · Docker",
+        description:
+          "Корпоративный сайт с CMS, кейсами, формами и бэкендом под продакшен.",
+        url: "https://creon-cg.com",
+      },
+      {
+        name: "nodefy.pro",
+        blurb: "Визуальная node-платформа",
+        stack: "React / Vite · NestJS · Prisma · Redis · XYFlow · Docker",
+        description:
+          "Node-based продукт: редактор workflow, очереди, API и web в одном монорепо.",
+        url: "https://nodefy.pro",
+      },
+      {
         name: "Pchelka",
         blurb: "Telegram-магазин",
         stack: "Aiogram 3 · Django / DRF · Next.js Mini App · PostgreSQL · Docker",
@@ -106,22 +139,6 @@ const copy = {
         description:
           "Классический e-commerce: каталог, карточки, корзина/заказ и админка на Laravel + Vue.",
         url: "https://github.com/Lleonsnow/GranitShop",
-      },
-      {
-        name: "Couponator",
-        blurb: "Платформа купонов / промо",
-        stack: "Next.js monorepo · PostgreSQL · Docker · Nginx",
-        description:
-          "Мерчанты, промо-флоу, синк фидов, auth и production-oriented compose.",
-        url: "https://github.com/Lleonsnow/Couponator",
-      },
-      {
-        name: "Cosmetics e-commerce",
-        blurb: "Продакшен-магазин",
-        stack: "Next.js · NestJS / Prisma · PostgreSQL · Docker",
-        description:
-          "Продакшен-магазин косметики на VPS — миграция с legacy WordPress/MySQL.",
-        url: null,
       },
       {
         name: "banking-system",
@@ -146,13 +163,6 @@ const copy = {
         description:
           "Ingest, аналитика и алерты — от auth до операционного UI.",
         url: "https://github.com/Lleonsnow/TraceDock",
-      },
-      {
-        name: "nodefy.pro",
-        blurb: "Визуальная node-платформа",
-        stack: "TypeScript · NestJS · Docker · monorepo",
-        description: "Живой node-based продукт: web + API в одном репо.",
-        url: "https://nodefy.pro",
       },
     ],
     more: [
@@ -269,6 +279,38 @@ const copy = {
     ],
     featured: [
       {
+        name: "LAQUE Shop",
+        blurb: "Production cosmetics store",
+        stack: "Next.js · NestJS · Prisma · PostgreSQL · Docker",
+        description:
+          "Catalog, orders, coupons, payments and admin on a VPS — migrated from legacy WordPress/MySQL.",
+        url: "https://laque-shop.ru",
+      },
+      {
+        name: "Kuponator",
+        blurb: "Coupons / promo platform",
+        stack: "Next.js monorepo · PostgreSQL · Docker · Nginx",
+        description:
+          "Merchants, promo flows, QR coupons, auth and production-oriented compose setup.",
+        url: "https://www.kuponator.pro",
+      },
+      {
+        name: "Creon",
+        blurb: "Marketing agency website",
+        stack: "React · Express · Strapi · PostgreSQL · Docker",
+        description:
+          "Corporate site with CMS, case studies, forms and a production-ready backend.",
+        url: "https://creon-cg.com",
+      },
+      {
+        name: "nodefy.pro",
+        blurb: "Visual node platform",
+        stack: "React / Vite · NestJS · Prisma · Redis · XYFlow · Docker",
+        description:
+          "Node-based product: workflow editor, queues, API and web in one monorepo.",
+        url: "https://nodefy.pro",
+      },
+      {
         name: "Pchelka",
         blurb: "Telegram shop",
         stack: "Aiogram 3 · Django / DRF · Next.js Mini App · PostgreSQL · Docker",
@@ -283,22 +325,6 @@ const copy = {
         description:
           "Classic e-commerce: catalog, product cards, cart/order flow and admin on Laravel + Vue.",
         url: "https://github.com/Lleonsnow/GranitShop",
-      },
-      {
-        name: "Couponator",
-        blurb: "Coupons / promo platform",
-        stack: "Next.js monorepo · PostgreSQL · Docker · Nginx",
-        description:
-          "Merchants, promo flows, feed sync, auth and production-oriented compose setup.",
-        url: "https://github.com/Lleonsnow/Couponator",
-      },
-      {
-        name: "Cosmetics e-commerce",
-        blurb: "Production store",
-        stack: "Next.js · NestJS / Prisma · PostgreSQL · Docker",
-        description:
-          "Production cosmetics store on VPS — migration from legacy WordPress/MySQL.",
-        url: null,
       },
       {
         name: "banking-system",
@@ -323,13 +349,6 @@ const copy = {
         description:
           "Ingest, analytics and alerting surface — auth through operational UI.",
         url: "https://github.com/Lleonsnow/TraceDock",
-      },
-      {
-        name: "nodefy.pro",
-        blurb: "Visual node platform",
-        stack: "TypeScript · NestJS · Docker · monorepo",
-        description: "Live node-based product: web + API in one repo.",
-        url: "https://nodefy.pro",
       },
     ],
     more: [
