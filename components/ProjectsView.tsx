@@ -11,22 +11,22 @@ export function ProjectsView({ locale }: { locale: Locale }) {
       <h1 className="pageTitle">{site.ui.projects}</h1>
       <p className="lead">{site.ui.projectsLead}</p>
 
-      <section className={styles.block} aria-labelledby="featured-projects">
-        <h2 id="featured-projects" className={styles.blockTitle}>
+      <section className={styles.blockFeatured} aria-labelledby="featured-projects">
+        <h2 id="featured-projects" className={styles.titleFeatured}>
           {site.ui.featuredShort}
         </h2>
         <ProjectList projects={site.featured} />
       </section>
 
-      <section className={styles.block} aria-labelledby="more-projects">
-        <h2 id="more-projects" className={styles.blockTitle}>
+      <section className={styles.blockMore} aria-labelledby="more-projects">
+        <h2 id="more-projects" className={styles.titleMore}>
           {site.ui.more}
         </h2>
         <ProjectList projects={site.more} compact />
       </section>
 
-      <section className={styles.block} aria-labelledby="smaller-projects">
-        <h2 id="smaller-projects" className={styles.blockTitle}>
+      <section className={styles.blockSmaller} aria-labelledby="smaller-projects">
+        <h2 id="smaller-projects" className={styles.titleSmaller}>
           {site.ui.smaller}
         </h2>
         <ProjectList projects={site.smaller} compact />
