@@ -14,9 +14,15 @@ type Props = {
   projects: readonly Project[];
   compact?: boolean;
   showGallery?: boolean;
+  galleryNote?: string;
 };
 
-export function ProjectList({ projects, compact, showGallery }: Props) {
+export function ProjectList({
+  projects,
+  compact,
+  showGallery,
+  galleryNote,
+}: Props) {
   return (
     <ul className={compact ? `${styles.list} ${styles.compact}` : styles.list}>
       {projects.map((project) => (
@@ -39,6 +45,7 @@ export function ProjectList({ projects, compact, showGallery }: Props) {
             <ProjectGallery
               images={project.gallery}
               label={`${project.name} screenshots`}
+              note={galleryNote}
             />
           ) : null}
         </li>
