@@ -19,6 +19,7 @@ export function ProjectsView({ locale }: { locale: Locale }) {
           projects={site.featured}
           showGallery
           galleryNote={site.ui.galleryNote}
+          mockupNote={site.ui.mockupNote}
         />
       </section>
 

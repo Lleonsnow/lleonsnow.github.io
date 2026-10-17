@@ -68,6 +68,8 @@ const copy = {
       keyCta: "Написать в Telegram",
       galleryNote:
         "Предпросмотр носит ознакомительный характер: макеты и UI без коммерческих, персональных и иных конфиденциальных данных.",
+      mockupNote:
+        "UI реализован по дизайн-макетам; после завершения проекта доступ к материалам ограничен, публикация исходников макетов по требованию заказчика не допускается.",
     },
     strengths: [
       {
@@ -114,32 +116,36 @@ const copy = {
         blurb: "Платформа купонов / промо",
         stack: "Next.js monorepo · PostgreSQL · Docker · Nginx · Figma",
         description:
-          "Мерчанты, промо-флоу, QR-купоны, auth и production-oriented compose. UI реализован по дизайн-макетам; после завершения проекта доступ к материалам ограничен, публикация исходников макетов по требованию заказчика не допускается.",
+          "Мерчанты, промо-флоу, QR-купоны, auth и production-oriented compose.",
         url: "https://www.kuponator.pro",
+        mockupNote: true,
       },
       {
         name: "Creon",
         blurb: "Сайт маркетингового агентства",
         stack: "React · Express · Strapi · PostgreSQL · Docker · Figma",
         description:
-          "Корпоративный сайт с CMS, кейсами, формами и бэкендом под продакшен. UI реализован по дизайн-макетам; после завершения проекта доступ к материалам ограничен, публикация исходников макетов по требованию заказчика не допускается.",
+          "Корпоративный сайт с CMS, кейсами, формами и бэкендом под продакшен.",
         url: "https://creon-cg.com",
+        mockupNote: true,
       },
       {
         name: "nodefy.pro",
         blurb: "Визуальная node-платформа",
         stack: "React / Vite · NestJS · Prisma · Redis · XYFlow · Docker · Figma",
         description:
-          "Node-based продукт: редактор workflow, очереди, API и web в одном монорепо. UI реализован по дизайн-макетам; после завершения проекта доступ к материалам ограничен, публикация исходников макетов по требованию заказчика не допускается.",
+          "Node-based продукт: редактор workflow, очереди, API и web в одном монорепо.",
         url: "https://nodefy.pro",
+        mockupNote: true,
       },
       {
         name: "Talk to Loop (MRG)",
         blurb: "Гуманитарная feedback-платформа",
         stack: "Angular · Node.js · Twilio · WhatsApp · AWS · Figma",
         description:
-          "Работа над Loop для Minority Rights Group: Angular-фронт и Node.js API; голосовые сценарии через Twilio; настройка WhatsApp-бота; корректировка AWS-пайплайнов. Платформа для анонимного мультиязычного фидбека (voice/SMS/WhatsApp и др.) с модерацией, переводами и referral-флоу для aid-организаций. UI реализован по дизайн-макетам; после завершения проекта доступ к материалам ограничен, публикация исходников макетов по требованию заказчика не допускается.",
+          "Работа над Loop для Minority Rights Group: Angular-фронт и Node.js API; голосовые сценарии через Twilio; настройка WhatsApp-бота; корректировка AWS-пайплайнов. Платформа для анонимного мультиязычного фидбека (voice/SMS/WhatsApp и др.) с модерацией, переводами и referral-флоу для aid-организаций.",
         url: "https://minorityrights.org/talk-to-loop/",
+        mockupNote: true,
       },
       {
         name: "Академия КУБ8",
@@ -288,6 +294,8 @@ const copy = {
       keyCta: "Message on Telegram",
       galleryNote:
         "Preview is for reference only: UI mockups without commercial, personal, or other confidential data.",
+      mockupNote:
+        "UI was built from design mockups; after project completion access to design materials was restricted, and the client does not permit publishing the original mockups.",
     },
     strengths: [
       {
@@ -334,32 +342,36 @@ const copy = {
         blurb: "Coupons / promo platform",
         stack: "Next.js monorepo · PostgreSQL · Docker · Nginx · Figma",
         description:
-          "Merchants, promo flows, QR coupons, auth and production-oriented compose setup. UI was built from design mockups; after project completion access to design materials was restricted, and the client does not permit publishing the original mockups.",
+          "Merchants, promo flows, QR coupons, auth and production-oriented compose setup.",
         url: "https://www.kuponator.pro",
+        mockupNote: true,
       },
       {
         name: "Creon",
         blurb: "Marketing agency website",
         stack: "React · Express · Strapi · PostgreSQL · Docker · Figma",
         description:
-          "Corporate site with CMS, case studies, forms and a production-ready backend. UI was built from design mockups; after project completion access to design materials was restricted, and the client does not permit publishing the original mockups.",
+          "Corporate site with CMS, case studies, forms and a production-ready backend.",
         url: "https://creon-cg.com",
+        mockupNote: true,
       },
       {
         name: "nodefy.pro",
         blurb: "Visual node platform",
         stack: "React / Vite · NestJS · Prisma · Redis · XYFlow · Docker · Figma",
         description:
-          "Node-based product: workflow editor, queues, API and web in one monorepo. UI was built from design mockups; after project completion access to design materials was restricted, and the client does not permit publishing the original mockups.",
+          "Node-based product: workflow editor, queues, API and web in one monorepo.",
         url: "https://nodefy.pro",
+        mockupNote: true,
       },
       {
         name: "Talk to Loop (MRG)",
         blurb: "Humanitarian feedback platform",
         stack: "Angular · Node.js · Twilio · WhatsApp · AWS · Figma",
         description:
-          "Work on Loop for Minority Rights Group: Angular frontend and Node.js API; voice flows via Twilio; WhatsApp bot setup; AWS pipeline fixes. Anonymous multilingual feedback platform (voice/SMS/WhatsApp and more) with moderation, translation, and referral flows for aid organizations. UI was built from design mockups; after project completion access to design materials was restricted, and the client does not permit publishing the original mockups.",
+          "Work on Loop for Minority Rights Group: Angular frontend and Node.js API; voice flows via Twilio; WhatsApp bot setup; AWS pipeline fixes. Anonymous multilingual feedback platform (voice/SMS/WhatsApp and more) with moderation, translation, and referral flows for aid organizations.",
         url: "https://minorityrights.org/talk-to-loop/",
+        mockupNote: true,
       },
       {
         name: "KUB8 Academy",

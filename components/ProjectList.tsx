@@ -8,6 +8,7 @@ type Project = {
   description?: string;
   url: string | null;
   gallery?: readonly string[];
+  mockupNote?: boolean;
 };
 
 type Props = {
@@ -15,6 +16,7 @@ type Props = {
   compact?: boolean;
   showGallery?: boolean;
   galleryNote?: string;
+  mockupNote?: string;
 };
 
 export function ProjectList({
@@ -22,6 +24,7 @@ export function ProjectList({
   compact,
   showGallery,
   galleryNote,
+  mockupNote,
 }: Props) {
   return (
     <ul className={compact ? `${styles.list} ${styles.compact}` : styles.list}>
@@ -40,6 +43,9 @@ export function ProjectList({
           {project.stack ? <p className={styles.stack}>{project.stack}</p> : null}
           {project.description ? (
             <p className={styles.desc}>{project.description}</p>
+          ) : null}
+          {mockupNote && project.mockupNote ? (
+            <p className={styles.mockupNote}>{mockupNote}</p>
           ) : null}
           {showGallery && !compact && project.gallery?.length ? (
             <ProjectGallery
