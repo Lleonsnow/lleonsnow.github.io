@@ -1,3 +1,4 @@
+import { ProjectGallery } from "@/components/ProjectGallery";
 import styles from "./ProjectList.module.css";
 
 type Project = {
@@ -6,14 +7,16 @@ type Project = {
   stack?: string;
   description?: string;
   url: string | null;
+  gallery?: readonly string[];
 };
 
 type Props = {
   projects: readonly Project[];
   compact?: boolean;
+  showGallery?: boolean;
 };
 
-export function ProjectList({ projects, compact }: Props) {
+export function ProjectList({ projects, compact, showGallery }: Props) {
   return (
     <ul className={compact ? `${styles.list} ${styles.compact}` : styles.list}>
       {projects.map((project) => (
@@ -31,6 +34,12 @@ export function ProjectList({ projects, compact }: Props) {
           {project.stack ? <p className={styles.stack}>{project.stack}</p> : null}
           {project.description ? (
             <p className={styles.desc}>{project.description}</p>
+          ) : null}
+          {showGallery && !compact && project.gallery?.length ? (
+            <ProjectGallery
+              images={project.gallery}
+              label={`${project.name} screenshots`}
+            />
           ) : null}
         </li>
       ))}

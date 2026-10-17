@@ -1,0 +1,117 @@
+.strip {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.65rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.thumb {
+  display: block;
+  width: 7.5rem;
+  height: 5rem;
+  padding: 0;
+  border: 1px solid color-mix(in srgb, var(--highlight) 85%, transparent);
+  background: color-mix(in srgb, var(--bg) 70%, black);
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.82;
+  transition: opacity 0.2s ease;
+}
+
+.thumb:hover,
+.thumb:focus-visible {
+  border-color: var(--accent);
+}
+
+.thumb:hover img,
+.thumb:focus-visible img {
+  opacity: 1;
+}
+
+.thumb:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(5, 35, 32, 0.92);
+  cursor: zoom-out;
+}
+
+.full {
+  max-width: min(96vw, 72rem);
+  max-height: 88dvh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid color-mix(in srgb, var(--highlight) 70%, transparent);
+  cursor: default;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 1px solid color-mix(in srgb, var(--highlight) 80%, transparent);
+  background: color-mix(in srgb, var(--bg) 55%, transparent);
+  color: var(--ink);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.nav:hover,
+.nav:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.nav:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.prev {
+  left: 0.75rem;
+}
+
+.next {
+  right: 0.75rem;
+}
+
+@media (max-width: 719px) {
+  .thumb {
+    width: 6.25rem;
+    height: 4.25rem;
+  }
+
+  .nav {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1.5rem;
+  }
+}

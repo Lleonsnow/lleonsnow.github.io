@@ -17,6 +17,7 @@ const stack = [
   "Vue",
   "Angular",
   "Nginx",
+  "Figma",
 ] as const;
 
 const shared = {
@@ -96,10 +97,15 @@ const copy = {
       {
         name: "LAQUE Shop",
         blurb: "Продакшен-магазин косметики",
-        stack: "Next.js · NestJS · Prisma · PostgreSQL · Docker",
+        stack: "Next.js · NestJS · Prisma · PostgreSQL · Docker · Figma",
         description:
-          "Каталог, заказы, купоны, оплаты и админка на VPS — миграция с legacy WordPress/MySQL.",
+          "Каталог, заказы, купоны, оплаты и админка на VPS — миграция с legacy WordPress/MySQL. UI проработан в Figma до релиза.",
         url: "https://laque-shop.ru",
+        gallery: [
+          "/media/projects/laque/desktop.png",
+          "/media/projects/laque/home.png",
+          "/media/projects/laque/mobile.png",
+        ],
       },
       {
         name: "Купонатор",
@@ -151,11 +157,22 @@ const copy = {
       },
       {
         name: "GranitShop",
-        blurb: "Магазин камня / гранита",
-        stack: "Laravel · Vue · Docker",
+        blurb: "Магазин камня / гранита — Figma + код, без релиза",
+        stack: "Figma · Laravel · Vue · Docker",
         description:
-          "Классический e-commerce: каталог, карточки, корзина/заказ и админка на Laravel + Vue.",
+          "Полный UI в Figma (responsive, каталог, месторождения, карточка, заказ) и реализация на Laravel + Vue. В публичный релиз не вышел.",
         url: "https://github.com/Lleonsnow/GranitShop",
+        gallery: [
+          "/media/projects/granit/figma-home.png",
+          "/media/projects/granit/figma-catalog.png",
+          "/media/projects/granit/figma-solutions.png",
+          "/media/projects/granit/home.jpg",
+          "/media/projects/granit/catalog.jpg",
+          "/media/projects/granit/deposits.png",
+          "/media/projects/granit/deposit.png",
+          "/media/projects/granit/product.jpg",
+          "/media/projects/granit/order.png",
+        ],
       },
       {
         name: "banking-system",
@@ -298,10 +315,15 @@ const copy = {
       {
         name: "LAQUE Shop",
         blurb: "Production cosmetics store",
-        stack: "Next.js · NestJS · Prisma · PostgreSQL · Docker",
+        stack: "Next.js · NestJS · Prisma · PostgreSQL · Docker · Figma",
         description:
-          "Catalog, orders, coupons, payments and admin on a VPS — migrated from legacy WordPress/MySQL.",
+          "Catalog, orders, coupons, payments and admin on a VPS — migrated from legacy WordPress/MySQL. UI designed in Figma before release.",
         url: "https://laque-shop.ru",
+        gallery: [
+          "/media/projects/laque/desktop.png",
+          "/media/projects/laque/home.png",
+          "/media/projects/laque/mobile.png",
+        ],
       },
       {
         name: "Kuponator",
@@ -353,11 +375,22 @@ const copy = {
       },
       {
         name: "GranitShop",
-        blurb: "Stone / granite store",
-        stack: "Laravel · Vue · Docker",
+        blurb: "Stone / granite store — Figma + code, unreleased",
+        stack: "Figma · Laravel · Vue · Docker",
         description:
-          "Classic e-commerce: catalog, product cards, cart/order flow and admin on Laravel + Vue.",
+          "Full UI in Figma (responsive, catalog, deposits, product page, checkout) and Laravel + Vue implementation. Never shipped publicly.",
         url: "https://github.com/Lleonsnow/GranitShop",
+        gallery: [
+          "/media/projects/granit/figma-home.png",
+          "/media/projects/granit/figma-catalog.png",
+          "/media/projects/granit/figma-solutions.png",
+          "/media/projects/granit/home.jpg",
+          "/media/projects/granit/catalog.jpg",
+          "/media/projects/granit/deposits.png",
+          "/media/projects/granit/deposit.png",
+          "/media/projects/granit/product.jpg",
+          "/media/projects/granit/order.png",
+        ],
       },
       {
         name: "banking-system",

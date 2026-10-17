@@ -15,7 +15,7 @@ export function ProjectsView({ locale }: { locale: Locale }) {
         <h2 id="featured-projects" className={styles.titleFeatured}>
           {site.ui.featuredShort}
         </h2>
-        <ProjectList projects={site.featured} />
+        <ProjectList projects={site.featured} showGallery />
       </section>
 
       <section className={styles.blockMore} aria-labelledby="more-projects">
