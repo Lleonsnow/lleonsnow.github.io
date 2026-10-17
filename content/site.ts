@@ -15,6 +15,7 @@ const stack = [
   "FastAPI",
   "Laravel",
   "Vue",
+  "Angular",
   "Nginx",
 ] as const;
 
@@ -123,6 +124,22 @@ const copy = {
         description:
           "Node-based продукт: редактор workflow, очереди, API и web в одном монорепо.",
         url: "https://nodefy.pro",
+      },
+      {
+        name: "Talk to Loop (MRG)",
+        blurb: "Гуманитарная feedback-платформа",
+        stack: "Angular · Node.js · Twilio · WhatsApp · AWS",
+        description:
+          "Работа над Loop для Minority Rights Group: Angular-фронт и Node.js API; голосовые сценарии через Twilio; настройка WhatsApp-бота; корректировка AWS-пайплайнов. Платформа для анонимного мультиязычного фидбека (voice/SMS/WhatsApp и др.) с модерацией, переводами и referral-флоу для aid-организаций.",
+        url: "https://minorityrights.org/talk-to-loop/",
+      },
+      {
+        name: "Академия КУБ8",
+        blurb: "Персонализированные курсы академии",
+        stack: "Laravel · Vue",
+        description:
+          "Разработка персонализированных курсов для учеников Академии КУБ8 на Laravel + Vue: индивидуальные траектории обучения, прогресс по программе «Ключ», связка с пакетами Мастер/Эксперт и сопровождением кураторов.",
+        url: "https://kub-8.com/academy/",
       },
       {
         name: "Pchelka",
@@ -309,6 +326,22 @@ const copy = {
         description:
           "Node-based product: workflow editor, queues, API and web in one monorepo.",
         url: "https://nodefy.pro",
+      },
+      {
+        name: "Talk to Loop (MRG)",
+        blurb: "Humanitarian feedback platform",
+        stack: "Angular · Node.js · Twilio · WhatsApp · AWS",
+        description:
+          "Work on Loop for Minority Rights Group: Angular frontend and Node.js API; voice flows via Twilio; WhatsApp bot setup; AWS pipeline fixes. Anonymous multilingual feedback platform (voice/SMS/WhatsApp and more) with moderation, translation, and referral flows for aid organizations.",
+        url: "https://minorityrights.org/talk-to-loop/",
+      },
+      {
+        name: "KUB8 Academy",
+        blurb: "Personalized academy courses",
+        stack: "Laravel · Vue",
+        description:
+          "Personalized courses for KUB8 Academy students on Laravel + Vue: individual learning paths, progress through the Key programme, tied to Master/Expert packages and curator support.",
+        url: "https://kub-8.com/academy/",
       },
       {
         name: "Pchelka",
