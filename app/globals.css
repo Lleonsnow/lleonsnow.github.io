@@ -141,6 +141,16 @@ p {
   font-size: 1.1rem;
 }
 
+html.gallery-open,
+html.gallery-open body {
+  overflow: hidden !important;
+  overscroll-behavior: none;
+}
+
+body.gallery-open > :not([data-gallery-root]) {
+  filter: blur(2px);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
