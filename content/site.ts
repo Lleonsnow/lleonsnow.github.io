@@ -28,8 +28,8 @@ const shared = {
     handle: "Lleonsnow",
   },
   telegram: {
-    url: "https://t.me/Le47on",
-    handle: "@Le47on",
+    url: "https://t.me/snow_leonx",
+    handle: "Leon",
   },
   stack,
 } as const;
